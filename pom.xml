@@ -15,6 +15,7 @@
         <module>04-api-aenderungen</module>
         <module>05-local-var</module>
         <module>main</module>
+        <module>util</module>
     </modules>
 
     <name>Java Update Training Parent</name>

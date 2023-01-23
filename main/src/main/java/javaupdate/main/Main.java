@@ -10,7 +10,6 @@ public class Main {
 
 	public static void main(String[] args) {
 		LOGGER.info(StringUtil.flip("!dlroW olleH"));
-		throw new RuntimeException("test");
 	}
 
 }
