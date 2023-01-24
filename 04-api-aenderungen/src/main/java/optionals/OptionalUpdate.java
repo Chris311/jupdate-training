@@ -30,8 +30,10 @@ public class OptionalUpdate {
 		Optional<String> emptyOptional = Optional.empty();
 		
 		// Behandlung von Existenz und Abwesenheit eins Wertes in einem Aufruf
+		emptyOptional.ifPresentOrElse(System.out::println, () -> System.out.println("kein Wert"));
 
 		// Gibt das bestehende Optional zurueck, falls dies ein Wert hat oder erzeugt alternativ ein neues ueber Supplier
+		emptyOptional.or(() -> Optional.of("kein Wert"));
 
 		// Erzeugung eines 0- oder 1-Elementigen Stream aus Optional
 

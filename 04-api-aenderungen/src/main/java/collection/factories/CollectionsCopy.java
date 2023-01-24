@@ -49,7 +49,7 @@ public class CollectionsCopy {
 		strings.add("a");
 		
 		// Erstellt eine nicht aenderbare Kopie der List
-		
+
 		// Aenderungen nicht möglich (UnsupportedOperationException)
 		// stringsCopy.add("b");
 		
