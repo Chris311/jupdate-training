@@ -2,6 +2,7 @@ package collection.factories;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -12,10 +13,10 @@ import java.util.Set;
 public class CollectionFactories {
 
 	public static void main(String[] args) {
-		collectionErstellungBisJava8();
+//		collectionErstellungBisJava8();
 		collectionFactories();
-		mapErstellungBisJava8();
-		mapFactories();
+//		mapErstellungBisJava8();
+//		mapFactories();
 	}
 
 	private static void collectionErstellungBisJava8() {
@@ -55,10 +56,25 @@ public class CollectionFactories {
 	private static void collectionFactories() {
 		{
 			// Erstellung einer List ueber Factory Methode:
+			List<String> list = List.of("d", "e", "f");
+			System.out.println("Liste: " + list);
+//			list.add("g"); // funktioniert nicht, da Immutable
+//			list.set(8, "x"); // funktioniert nicht, da Immutable
 		}
 		
 		{
 			// Erstellung eines Set ueber Factory Methode:
+			Set<String> set = Set.of("d", "e", "f");
+			System.out.println("Set: " + set);
+//			set.add("g"); // funktioniert nicht, da Immutable
+//			set = Set.of("x"); // funktioniert nicht, da Immutable
+
+			// Unterschied unmodifiable / immutable
+			// Basically unModifiable Collection is a view, So indirectly it could still be 'modified' from some other reference that is
+			// modifiable. Also as its just a readonly view of annother collection , When the source collection changes unModifiable
+			// Collection will always present with latest values.
+			// However immutable Collection can be treated as a readonly copy of another collection and can not be modified.
+			// In this case when the source collection changes , immutable Collection do not reflect the changes
 		}
 	}
 	
